@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0 r1840935">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="LoginsinMIba" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.3.1.23. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="sec-ch-ua" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua</stringProp>
+            <stringProp name="Header.value">&quot;Chromium&quot;;v=&quot;122&quot;, &quot;Not(A:Brand&quot;;v=&quot;24&quot;, &quot;Google Chrome&quot;;v=&quot;122&quot;</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-mobile" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+            <stringProp name="Header.value">?0</stringProp>
+          </elementProp>
+          <elementProp name="Accept" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-platform" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+            <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">baturnos-backend-gateway-qa.gcba.gob.ar</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain"></stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://baturnos-backend-gateway-qa.gcba.gob.ar/ciudadano/turnera/ciudadano/findCiudadanoTurnera?GENERO=2&amp;DOC_TYPE_ID=1&amp;DOCUMENT_NUMBER=35000052" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="DOCUMENT_NUMBER" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">DOCUMENT_NUMBER</stringProp>
+                  <stringProp name="Argument.value">35000052</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="GENERO" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">GENERO</stringProp>
+                  <stringProp name="Argument.value">2</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="DOC_TYPE_ID" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">DOC_TYPE_ID</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">ciudadano/turnera/ciudadano/findCiudadanoTurnera</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="AuthorizationRecaptcha" elementType="Header">
+                  <stringProp name="Header.name">AuthorizationRecaptcha</stringProp>
+                  <stringProp name="Header.value">03AFcWeA4Cihvua21GZnuOlg5miWjfAgMTn9fO_pyLxMT0f1m3oI5bUfrt6s5m7p5maIDxpRi3boDYWJi_cz000LpykJ1U6TZAB-piP1Hr_ZC79IIhy-bQOQ82DReuk4Jp_Bxy-8_MhgOq-OjaEraYQCneZmlcVKFylB6UF_A8tl5dseoSkpL_xUwM3lOKqzk15-xo7RHXZKBm9xBedIXVQscH9OYQj_3ks1qNjGQv3tFAjgdW_GWnDMxZoqIpgQuGcltKTE2Z_f8omqlf-XR6WOu2VYrucsFupatZTNqdgW0Q6kygg90ZOin_q_xLpEGSvrz7RbEd1DK4C8SIftw8ATWVaHD5AidMR9fDUDPoCRzowj5EzaMHFMsgG8O-WzstJZ6xFgCUzVDcT2TyfkjJwVMVmbkWRkr1cyVI1NljPx1g_OBXsU07t9T42dHAnbdivZLT6Fnv4RhkGLwevzntlcjGkD_srxar1OW0JgxzvtCCx97iQbTA0ceSGssl-G2UAcxlBfZEvcbd4T2MLEQvPI7dWgoPW1QeOuWaKcNrjm0MghK48esHUC2VqE151Vem8HynPrAtDOpiKmqRJykcbZO0wOFY4oSI3JPCwL06Hg-tmwzmUsib-qwR5sroii-hb9N4bgOVLkhIrZMA9UhguQrHYVgjLFoKMR43qoDbqmxipHP7ASIufu9KZ3ilQL-dCzHerdQciQSTXn-lGQjK-XewJu0sMjG7XQ5NWzw3MdFcvxFrNzBf6rvkuMOhe-gTZdkX4GCdLxKbDjrPHejvFAexsT2YNorUlv0NKbA3kF4lkSWaTxmGxZud3QpuJnyGCjG1icW__VXFKSx734f1J3McmtnkMXu6NjhxozuBdpm35IwzOjG1VIQbtiLMHN4ekPuxSxdWPJVxu8uVtpTQuwtfqpMdBLxHifwor99tyA2-U_ju6NMoP4yJ649vqAZb4YNmy7FIX_YGqcdhSdLCvagpEOVHaYCRILCiAxTTMjeeDF16G3texOfvqtILoxwLTI9rfdvnqZ1oX_a2_2NOAnMp2uhqI2KNbG4ABW5lHbtpRHqeYuJ6JU93QPK2hfTVpE7ONdPHhdrJwUpUe-LhEZYIO5RLVObmHw6uXMqFBXOn6Rh_cLoSSZqKOfb8E7OcoM1GHcHEkpsCqvT5jjVuXUcMsrqw_F_vUEhPRCRmMH6AoFlUFPQgde_rVgAcwIbEarIXIg4dQ3iQFE3avc_X98bZX-I21pcoPr8lJEFzsv-FK1nw-Z9LgHe7CdYb2Bgveue5F6fpxLzUAe-oKvER5cCAN-sU8hvCNCXpfVMS3-KmoKnPOCQhvcSkuVQ6qlulxYrFcKcDA_MkR0pUskiQjxppIEUjgC40YbWhVMQ-t2f-Je7IIsSMmPtrjAEJOmsHnRUqK5-BtGzuIChW8mU69sRuBb-AutQnLDlMFqsBN8UUewwiKYdAs1_SlfYnF-yHaYBakOJlj-vfr7Nazpuji-fCCeHUBQ-sAebvbpvBVvLb_C-CvGp798dbgmo5AyyKkC4f3ExciDO9poJgGBxUbWF8KdIe4FRm8Mo0EujXMYlz_XZgUUtxECFwDvmAbt_YnhSVSkIYqEoebHgtzRmstpBwpnx1-aNVN3ZQv9s1A-jZxy3dWXneMemV2qwjl3hDC0jG-rV4Ytknew2FHSTCngdIPvODZHn3oyPme4gKLsvXjp-jeaZKpWRsBvKRnWS0zDexA1zrV5A93CQVfMwOUw89hHdXX1vInSA4JXI8z4DcmCzD2wkb6GbJEcSUAhckqClNVGD6kEOE_tsRrx-Nm2aXoKpFZK0YORr3Fy73g5ZQuA7Iyb8h14PwadEyMFmb4PVeXiPPsY8BZgzD5H3odqD-pFg64BjFJdbFVwZQAgN_40xqHSJf-Z946jzJShtdXNsF8WeyjK62J8HBw0LffkhQKMvXQMygjQkbkJKjkT7k65g2MFnnwTc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://baturnos-backend-gateway-qa.gcba.gob.ar/agenda/turnos/vista/fechas-por-servicio-id?servicioId=405" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="servicioId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">servicioId</stringProp>
+                  <stringProp name="Argument.value">405</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">agenda/turnos/vista/fechas-por-servicio-id</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://baturnos-backend-gateway-qa.gcba.gob.ar/ciudadano/calendario/findCalendario/2024" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">ciudadano/calendario/findCalendario/2024</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://baturnos-backend-gateway-qa.gcba.gob.ar/agenda/turnos/vista/sedes-por-fecha-servicio-id?servicioId=405&amp;lonOrigen=0&amp;latOrigen=0&amp;fecha=12-03-2024" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="lonOrigen" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">lonOrigen</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="fecha" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">fecha</stringProp>
+                  <stringProp name="Argument.value">12-03-2024</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="latOrigen" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">latOrigen</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="servicioId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">servicioId</stringProp>
+                  <stringProp name="Argument.value">405</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">agenda/turnos/vista/sedes-por-fecha-servicio-id</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://baturnos-backend-gateway-qa.gcba.gob.ar/agenda/turnos/vista/horarios-por-fecha-sede-id-servicio-id?servicioId=405&amp;sedeId=2221&amp;fecha=12-03-2024" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="fecha" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">fecha</stringProp>
+                  <stringProp name="Argument.value">12-03-2024</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="servicioId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">servicioId</stringProp>
+                  <stringProp name="Argument.value">405</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="sedeId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">sedeId</stringProp>
+                  <stringProp name="Argument.value">2221</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">agenda/turnos/vista/horarios-por-fecha-sede-id-servicio-id</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://baturnos-backend-gateway-qa.gcba.gob.ar/agenda/turnos/modificacion/bloquear-turno" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;miBaId&quot;:&quot;&quot;,&quot;nroDocumento&quot;:&quot;35000052&quot;,&quot;servicioId&quot;:&quot;405&quot;,&quot;tokenFirebase&quot;:&quot;&quot;,&quot;turnoId&quot;:235700}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">agenda/turnos/modificacion/bloquear-turno</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="AuthorizationRecaptcha" elementType="Header">
+                  <stringProp name="Header.name">AuthorizationRecaptcha</stringProp>
+                  <stringProp name="Header.value">03AFcWeA7v2Y-nB4cr8aLC417SH7FReyxLOShuv_XWq83-BpI5zgiWke8cgdTtZl9H10v4JdnMj2NAa07tUHeOvueI_G8axWaUN_6sggC4vR8v9KKGBaZH_eEUaY7sQAg1JX_J1BhfnEEKcLUogOt8R-LLbnO9tvbyt9ZvDil4WkGn9G-Ku8gt-EA8vmuAWsCSG4cG8jFGEfVE8yw0rCoXsf-xh4uiMjSstDoYmReZzwJu6B4XwD5NXXyb6JuW4wcgZ-XEnzeRy0sITMZNTaDKUSFjnu-9DqfkwgCzoROb6Ddk2IQfyi7afZSmxO--M-2KVo1LFpiCd2Lap36__z5Y0UKtJtxUQhSlPyko77hn9Cy3Ryx4-qYzQ1oXz60VTWWdOozPKSBxCGj5hHiyGiQIuZmKfMTavjCsJZXjRR67qL6d43-0kgeL69_1EERiIknNSmzLB4s6Uftz07kowoP-328c44w9LceyxH43K2KKz1-Wkx2J2wKU3XXtZgrZJDTkucLshYik0P2krMnU0UBJ6kdCx0V7QpTOBLS0w6fnpC_KlPaRtie9tKQa3-BYMfzCxJGi-aTJiQL6TBpzpJG6bGBFR93y7arRokFfFa9pUDPPQs_WJW5D0qEWB-0GXF63DEjlQ2UM4Wd-3jWt0_9SpOU3LRigA73-d-VJQbiQgWWIbGqJqQt8CEdLZpc-o8XS8hupJWhQLKy1R7_MBsVZJzOwkdZkRVluTuocEeHo1LlvwtvMarQ-E_Ypfx7QgxI7612RKjxE7M6aeeY6nF10VRjQ5AUZVYTz3AV0WW8zYBl6pKmz3Ngkj_yeuYyAq4Y2e7uXAKkRWf_UPhcewywUJhHlODObVi-AG7PxF9vJHxvB2CxvdEd2777gWGuxCpIOYfFo-3ZPlwRZ9H6Wv29T6CgV1ua2QXMNc4vuytwnf24KU6Y56JYmyzP3wjZ3i2VkHqQLUcmiRmJIi3Oxp7ulzkNJkFMhkhgHx1111qxbsqgwg_4q8JmUMLWcEXQO8wWtpploLsWl9t2Orv367TmCM5uwkgyjMsu_otq2Li9TXGQjFH5DdpDPmXPfWvLmUpVirEvDdagvrxWBEHHbbhMO4ufYpxS5O9vFDRyoEZE0FZYVfMbzNH1alFXDZvLcrN2mAmnJAIOToUyhnM_AD-q_-XXQYdon-dgNCVcBhmF_3FOmFedVo-apYl1LKuYX425NEoTBH8f-MCUWbsnsQM8apyrRuMU9-3vSTcw_NzprK3DaCIlc8wbPsguGVAiPR1i7XlKWXVTKuo5FfJR2Dz8ZzlsJTi8ox9vbqO696l29kIiEVnd6XKumJSswGPS6fI_hZTNdjsjRGWYJJ6jvSOHWt1305V98uyqNKAoGU1Xc8MZfsMFM0W6fZ7bThEbqYGT6yyZuPTEfZIVKDLoiNnQvvOgaM-DvFbyVffivCS-hZwuspXJyAGPQgDQkn-bxVAcLBEK_K1WVcTeN8L59pSATRvgeaFiPAyHyXsnDm_DEqBP8rCbbFfr-fFoPm2gwRPuZoD2KHENpBk-kBH8o76ED9BUrhLJnYGw4FvvknYMavulIA4oP5q8LCKKQM-NEBijwK0l5CLvBf0QHGmnBTNOAYd_B0qoYFn8KaIh5iPjqu7JZ8OkYFluMlq7Na9MODv-5liStFYtubre2gYawNhJtIjiCHc9FBvx36KrqiHi3mfdsl7YA86ErExN6yTbJY60UZORh4kepAeh8v-inipxaUban9Ssn86YiCAQ8u4xfZAmXiVTS9sm1zzxo36TpJ5b9vDE0j16_BDW_J0cZv2gg42D4QRqU6b-lZ1c8HYJLPF0eF6eETgd9oOKDmLX5J6nVJM7wfeYObWZAeU16fKg19RmwPPSqeDuqNoGLfRGStcm80Go3hOJYMSw3YbUKQfaaofxJufO0TmQcMMiCu0KXdQpnVmhA1Dzizg</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://baturnos-backend-gateway-qa.gcba.gob.ar/ciudadano/turnera/tipo-documentos" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">ciudadano/turnera/tipo-documentos</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://baturnos-backend-gateway-qa.gcba.gob.ar/ciudadano/turnera/paises/findCodigoPaisTel" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">ciudadano/turnera/paises/findCodigoPaisTel</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://baturnos-backend-gateway-qa.gcba.gob.ar/agenda/turnos/modificacion/reservar-turnoCiudadano" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;turnoId&quot;:235700,&quot;servicioId&quot;:&quot;405&quot;,&quot;canalIngresoId&quot;:3,&quot;ciudadanoDto&quot;:{&quot;nombre&quot;:&quot;Juan&quot;,&quot;apellido&quot;:&quot;Gomez&quot;,&quot;tipoDocumentoId&quot;:&quot;1&quot;,&quot;numeroDocumento&quot;:&quot;35000052&quot;,&quot;fechaNacimiento&quot;:&quot;&quot;,&quot;generoId&quot;:2,&quot;comunaId&quot;:9999,&quot;domicilioCalle&quot;:&quot;&quot;,&quot;domicilioAltura&quot;:&quot;&quot;,&quot;email&quot;:&quot;juangomez@gmail.com&quot;,&quot;codPaisTelefono&quot;:&quot;54 9&quot;,&quot;codAreaTelefono&quot;:&quot;11&quot;,&quot;celular&quot;:&quot;11111111&quot;,&quot;integradoMiba&quot;:1,&quot;mibaId&quot;:&quot;&quot;,&quot;deleted&quot;:0},&quot;tokenFirebase&quot;:&quot;eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJUdXJuZXJhSldUIiwiaWF0IjoxNzA5NzQ2NzIxLCJleHAiOjE3MDk3NDY3ODF9.-yPAMHfY47RNK5VrlymJYCKBM0HuBYFmbc8UNhbtCbrEonFMkYHvwY33bu0_bEDjrCNcHlKtSOvcnEkj5j5hDA&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">agenda/turnos/modificacion/reservar-turnoCiudadano</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="AuthorizationRecaptcha" elementType="Header">
+                  <stringProp name="Header.name">AuthorizationRecaptcha</stringProp>
+                  <stringProp name="Header.value">03AFcWeA7U0m_3i3lNjb5InkAtJNEjeG_PTsx2A-ujcPEsq-vP7aMUM5_Zdp1ziCFiBv_16eJynTFJIRipriE5CqNvIIixhDuY9RVLBlMsYezg9d4KfYmxZI0L_bQRWuMBQj5JyJDlHRQELavH4OLC5Zq89LxTQZczWgtaXg7T0F_aFPjnqMUwawA-9HW8fcAC11FruUsiMOakjodG1LoQilWkvctVUXUBvHF5fjnvjv_c5Cq6u8H-0sYlnFhdT5Rg_XwUtuFeHHwHxyyVKMgl640l9rxgiJm6Z3bmthDQFv1tbm62MjV6Yf2a69eLxbgkmjXh297BvA9X9c2z1mQQ1LGXycIwY7s-14qp-tm6IKyydpoS-KTWcWwMHjgWb3pdBoFcomRbR-6YiGAkRzwo_kZ8dFpk5R8S1075NiJECvry1CAQVVnFacP75m2cFdRnGvfr9nUDTG7mzVkyL9oYfx1MxdAPIkKBi5q1ryPToKj6IzQGx1LCOqcwfesu8hrbQgpSB419yI48iBCBOizIvKWb6MPAysHWp9Y8uJKk_UweCOBKTtK1joR47Tyolbb2quccJh5MDQB_usSm-bJWnZ3EXrE6XFuXEz6rzMog8o1or43qBD3364vqSPpIqz-DHTcgMSNK9SMvQeA4k7YMlESZk2BOQl3y82Aq3FWu4s2hiZRBOOa-uGs0Xn6SPYdLDIUvPMQICTKqU7TDDfRW1hyCkq9zdTrNdAfuhTcdX7OqhwWHfzYa4bmqNIJ-X5tYESijvTOLKOr_93W-vasKQZcdkBV0pgk92jFZxRQteoQqixkWfjverHKoqj6wShgB7N2SZaWN63aWz1WNtl4d3bHCOtJ6iBLikTMr0eCZ9nJrQu_8vZGY3DBCE7YtYpFkV1Q4b4YRwln_Ol5k3etw7G-Ehxbh2cZWnY8Wvkw5ODM1qWaQvsHVsz0RJiUx3uLTHRp4gfnn3bxTauMgJCOANK6WcwYSmxSR6Xke-u9s1NVvyVhzmeHdM8xSI7dnLQhSviIV3KZonN3pqiDR_93e-1p8vwJNZb47BZGvTykxAMWcXGMnAJnvcZytxOc047YT7zmroPTomV7r1gQBfDg84utuX6kWIEsAtRVUoFVa96sdDr8Ty1cpWZfL3wglO8-BDz4xUVZEAeM7TZgPhteW45_bP1LQCLOI2OwjhNxx-wP0N3c4BpzqOkb0PeAr6qaj8R8cLrIea735h2dmFCOZOJdemHC_3gtOKM0dgiPhvD9b2B4ZkEP0dUfhiPRyE-PqcKFTv0BZxYIV2dKsPI-RrXUTHJGJ9gARo7g4j1QS9X2aX0UGW1r--9SzNajoDYY94TQCoHryxzi5Opzqh2WAV7pI6fe5VaOTNHlr3elj66EEuvzSSPdDwFrKi_SBuERLP77ldLrUPTwgfiT45g9WZo72Krx9mKkxB79PTlA9s_7KEctruCVtP3LNnoHJlL6pnCXok2-w0tvxCLh_iBoK3W6IR03CaXq52cmX525v7xjZsrX15_-TaG2sMLa-6BIKvVRI4JxuiVCoN2oRDlEXOmohurSfeJTffQVq0pN16MiAGIfLacVb0rU0vwYfvcXjtPrQiW0fXOJ1ew58l4w9pOYgZZiBKYdr1o1IgMSVbTJWeVml432T3I2nzF-flxTyXwYVMFXplgX3nA33jEy2KCLIezHP1upp9YIaiHPOwfk2wNLblral1TyxnQJyp8RFcULKEPfdS-6VRFQTjX8CQJgaoJFGuspe4MdHDmnO0pk3smDg_G31Ty3x8Bsu34PtZyC4-pm6NFlcaH_Hihf_1o727iUV_7pGjEXuPrXhRP-yIHtWnUte88O1W8GVQCGbuvOUVub3W3z1sd3pgUfpC0-egX7lb6ukpKaGHLZnkFt549FT1QwBrbkqCjVDKAdcCHbZzubddLNW5Zdfi5m3-LhMCmmpw9DCZw</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://baturnos-backend-gateway-qa.gcba.gob.ar/ciudadano/correo/correoturnoconfirmado/2756" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">ciudadano/correo/correoturnoconfirmado/2756</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="AuthorizationRecaptcha" elementType="Header">
+                  <stringProp name="Header.name">AuthorizationRecaptcha</stringProp>
+                  <stringProp name="Header.value">03AFcWeA6wa_dlP_pcsxT6epv97QxkHhih44W_pTTblc-bBfvloqbHkkhRw3KBei58--i4u0moaMLcSazapCEUNGqM524dcNPniqJie1eltrTQ1_dUT91JxMKUsSXOJcXXo9GkcM5zKPHgCuJRWKBlgE-JbqTck9Aq_5A6puZS4i4GThpVRLN8nexkiLjZEccMC8GJ-35TPFnFztQ3ErD1tkS94VVkdJ6AzvgiOWCKD6UsonBMH3E_neXpU4jdGaALtq91oyEI0xDwlLn22B38CePBbOMtv0ZOm8OXGK6HgwrOWabuqHH3kywcDUHo2b43JwlQt5LiGqOccOJThz9XLDI2CROMsBD5t7ohc-YgGnKIZYLrQYuorRUTNJT9xgmNdANTzszdd8DzLpDf-bB-fxn6zNjs0ytH1fb4QIcuXvCBnWUupY9_WkIm7nT1DWSZIBIxB4iET1zMt_gBg5VNJ35EIMnWbDmyoAd7YMwe5VvzHKK-eXEHNyMMjLJnu6cCpD9iSDOdtomtL6trztIusxGAY7DamlC-MS6AFZpVY8yirL-5Vk5KCTIqvT9WXzExNdGYLG-eDnaJd-RdDHkUmUb5969G9c-tTcb1l4wRiTyhIrNM0ZX-4lTywQvG5r4bni5XjEMLRDjykKxEqy-bZm8neTBjQAO6IydjLAFzDlGiEkQCkcl8XOpWRs8mmotDYK6z8nlaDTgoQjePMP3BdMVcnWF56j5b8mRAMgWij2NR_xBsnbm0_Ua3NJGVRJgnRBVQcVNKh9W9H2cubchNbm_bdeqxMNi9qunJDU4cvO04t3l8kVhIk7d3Q9ynTNYuzvnzwHOpwp8DKp5xNx2U14bQmuS_NHkD4wuA7hcPSaQ6mUErXV5E88ruhy4qqNx6mA03AOJUrXQTeFnRH72QgU0JA07vRhcK2NZwGEexAtdJvOXov-dR9IPwvLOwPJPKObmoTAupPIne9UE2QeKWbowfgqSkykcXjoVAuXsSBRqaqOFM617PrbKdkHfu4O08WymXiR961Qjf10hcDtqBbgE-Cm9Idp2Z5zA-AWOJpDDjXPp9-8qX2gzdEiPGS_qKlg5nnDoFDEdskxWzFxtCEwMm5l9LGSew7SF9T3Fn4eJBbnuyv0vceB-e0PzZA-MHTnX94ZXtSG2Q8BWCGi_LjdWs6qSBm6sUt53IKblgt7JL3jobOZD0r1BeGxYIIe9_8F5iCr90rbhH7-6lafvOFGHeLl_-NeRZtFYJl4DKOAr1yZDCb8V5OaLrVi4g4Z_YfkgWxPCJo1pZtjvsC1ubsCIiurcVRO75hl65sFV87-CtujNnuOYNYgua_3VXUTr4ezhOOcRVo2AMpOv52y5Np_-oI-ntE8MDU04e5aFKguSNKvnCZyRxRe2ULsKte3CRSGoiNHHoy9_SkAHuEC-itS7c7rCUNLHeegK-ajl5IlgMZnVMMrxw0sMfDlMnyAUC6BJagVhgcRIhxDZnnhW4rM4Rm9K7Xh6gev5L1xWYXcRnM2PQOaUy5KVuzuiP1QfKsfvquxN4xNjIRelpfB1jLa5mLqnlj1leZwMTJCow4hwkzJlouQNz58Uy3thU-TtcgHZcZkqyBqFhqThJk1W7SEdCv9tMFCLnvleri4HGo9AFFwx7N4UhmtOcL0BU4hr6X2bSlt9IFBEgQTemPSl1-lPcgHmvvACQ1lRNgI2p3hVpPUlHTWXPO9a6qOEN6NA4clFg1Qc0aLzaDPu9o-fNkmqFn74UeEDIkQpR7b6MG1SQwxNJxE_egU1gGccjuKzhtiW8Ndas3vZrfFKNa_7deCUXycUTwlgIdriTPkjXfO72TkqJv2-tvTPOC-E7ZPjvK9TyiF-sCwNDTFMLR-s9qqG1Hm8_U9wMcUSIT2heN28PPZgNsJgY6PE8dWok2fRDOyWrkzpqpVYdbuR7QWN7uUuhOUTn7FVR2WdumkZqiGWtXFOCOmHEkrk</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://baturnos-backend-gateway-qa.gcba.gob.ar/ciudadano/boti/send-notification/2756" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">ciudadano/boti/send-notification/2756</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="AuthorizationRecaptcha" elementType="Header">
+                  <stringProp name="Header.name">AuthorizationRecaptcha</stringProp>
+                  <stringProp name="Header.value">03AFcWeA4q6Yb41RcMAn_iJGTbWim9KYdtxityBK3l0Gf4-rfTMtZG-gkOkNlyy1a9FCNXWXJG9BKF4oeshGPaROPs7p6MF394fNAwHo1BFx9xUpeMshAL0hsneg757Jnhxj7sxY6U0C2z_jxCJLpGx3OOYqQPnSJ2TLkcB4P3XFZAe8sepwTAlQZQClUshBbhiD3Bm7tNQObr7Jo0vv1fYrfSMLN-K8PtmAceamiSoHj7Z9--v_VUoDYsQ2FrpZoICofDjbkRi6PCxZfKWP25W01DCX4oyKJnKAMiK-bb818_-lNlcv0P_DA50y7z5CoaWU6F6gK2qQmVL5anWKVuNflMN3xOtvywzBwI6biGCT7i8FgG7D5YVBzShNZDen3wy7YhPbKtJoqsS5gKu3qEHdZhyNSl360aGAkAhGTFRXrm4wpMWKsGHOXNDxgUcAcCBrbkjQDbIySPpusJO-hOnWQAdvkh11rJHCmECJt9q-aS0Gdi0m8Lrdtqvc6-127CWogFm4A3SB3wV-O2b3Cln4ntwzPPmMhEzHRZrCyxkM9rSPZsjNRRUlJRfWdHzLlfXQnzHIanjSYjHhHrPwTNUTORlmROVprBMl7QDRofA7xSrhEUOJX0Gn8gNjb0Fe88qF7NQeSH0iP_DZl7OdpoNsZ4kzNbvuAtqxaRM-lPS2vKt0xuw-DNE67QC1EL8w4Xmir7fYSE8A7rEBGX8wcauXhlqIemLAU-0rBEcMYtQ7MLB8MAjXClxcZS_skFCQL0oHSU1EGCbFLJSo3RR4FMDsJsOq2SAUx3iPt57hZUuO2z_hwwA_oJnetRTtoZqAuA7aqLwQKll_qGIduTEjYGHoW3XKyV38wqnD3i8ICmAYRWwlHhTHg_dX9gEa6U1U-9ghFZKTaUcmy7gelfr_ajVKWJFtA8Z2NB93MyiwrX9OVwwWGzQBWdfLx8Tt0U4tocrZDQp56-lEJlLqVGMa8ksKW9WCcnQI2oIapZxUGl8XT1xpf0DP-ht0wPGnNqj9l00UYZN1fAFa6QaT1hoJH2flHkpM3QG7RJwWzlQ-vqaa-Lj-gIR4IviJCte1oeEIIiQ5I7UnOONiZlJSUTLo8Aw8KyusxI66lTHrmhNs945OFhgYkknTjE1cgTncdY5aQgj3FTFz5oRf7a_K2j-ZvuolDnNP_biLuS2NivhbZSghExnlJLpVAFxWhgaEEkuQMCycpZs6kvQRWCzGn4Hbzpb1b0yxxAFZo3_8sPHNZn0WfOLVvHX677dKboYjtOJvBnrrpGSPSBs7O0x7TJ7STerQWV-2FbtgRROqb450cX56aa9kR7_KhNh11eXHAKyPcFc-CX9sIf9eVdAXjtrI_RRy-AFvIeGAUwWK1S9NOArNJ7Zs5jSVQpeEBwaaHAxFgdlBrtKjKbR4ed5uUuAqExv7LbhOQFwAJxEVA3zS393X3pcHsooJXAISWbd620Rp9cfqQave1XS52d_r8NMoGzaPNugCSCk6JVV72idwU4nbwIv5E_lULarEpRFpPgvJP2kv0skjGYghY-07JPldVeCJe00F7tDicobnF3YdbLMdLnzxPajo99dEiq_ODtZJrOvzX-O5_IgKTriX8UNGtkqT_EVw1IfXjV1iAiSh1x2BQl5Bf051oPzlYLNnDf722qHlVHSzWuUaexAcj-btyPjjNPZXkF1IoGqQxStvWftlsy0uXGkpxtHNP5_xIL2rtpUmfEZgCQs_shenrD6vezHgM9_yriak4fdU64SxRux_flIQjaZ3g78hSiwfDAFe6grY4uJ7d-GEiRKalPXRO1lHwKdmzeXUbrUARpn-KHlBV8QHCepd96l29TvJO5_TiU-YUx3SZMwspAxBV68655q0vQvMjNmT_iTLaCLrt5m-Hn_xqmFmhnWV08YKiXcMZWxgBaAQ6B1j55KSUxQ6d3-9YMCu-L_FASXz_l60xrO42YfDwWmCVNLkOMe5KSI3lYW0RwMObNE6m9g5vITrEF9Ie9gGPzDzOjZQ</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
