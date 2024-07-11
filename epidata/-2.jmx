@@ -39,7 +39,7 @@
         <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
       </CookieManager>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
         <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -52,7 +52,7 @@
       <hashTree>
         <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="false"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="01-">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="01-" enabled="true">
             <stringProp name="HTTPSampler.domain">mibalogin-qa.gcba.gob.ar</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -417,7 +417,7 @@
             </RegexExtractor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="04-">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="04-" enabled="true">
             <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
             <stringProp name="HTTPSampler.domain">mibalogin-qa.gcba.gob.ar</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
@@ -517,7 +517,7 @@
               <stringProp name="RegexExtractor.match_number">1</stringProp>
             </RegexExtractor>
             <hashTree/>
-            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="code_Endpoint_5">
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="code_Endpoint_5" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">true</stringProp>
               <stringProp name="RegexExtractor.refname">code_Endpoint_5</stringProp>
               <stringProp name="RegexExtractor.regex">code=(.+)</stringProp>
@@ -527,7 +527,7 @@
               <stringProp name="RegexExtractor.match_number">1</stringProp>
             </RegexExtractor>
             <hashTree/>
-            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="state_Endpoint_5">
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="state_Endpoint_5" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">true</stringProp>
               <stringProp name="RegexExtractor.refname">state_Endpoint_5</stringProp>
               <stringProp name="RegexExtractor.regex">state=(.+?)&amp;</stringProp>
@@ -1144,7 +1144,7 @@
         </hashTree>
         <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="false"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="01-">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="01-" enabled="true">
             <stringProp name="HTTPSampler.domain">mibalogin-qa.gcba.gob.ar</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
@@ -1509,7 +1509,7 @@
             </RegexExtractor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="04-">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="04-" enabled="true">
             <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
             <stringProp name="HTTPSampler.domain">mibalogin-qa.gcba.gob.ar</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
@@ -1538,7 +1538,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="Sec-Fetch-Mode" elementType="Header">
                   <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
@@ -1599,7 +1599,7 @@
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="session_state_Endpoint_5">
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="session_state_Endpoint_5" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">true</stringProp>
               <stringProp name="RegexExtractor.refname">session_state_Endpoint_5</stringProp>
               <stringProp name="RegexExtractor.regex">session_state=(.+?)&amp;</stringProp>
@@ -1609,7 +1609,7 @@
               <stringProp name="RegexExtractor.match_number">1</stringProp>
             </RegexExtractor>
             <hashTree/>
-            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="code_Endpoint_5">
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="code_Endpoint_5" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">true</stringProp>
               <stringProp name="RegexExtractor.refname">code_Endpoint_5</stringProp>
               <stringProp name="RegexExtractor.regex">code=(.+)</stringProp>
@@ -1619,7 +1619,7 @@
               <stringProp name="RegexExtractor.match_number">1</stringProp>
             </RegexExtractor>
             <hashTree/>
-            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="state_Endpoint_5">
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="state_Endpoint_5" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">true</stringProp>
               <stringProp name="RegexExtractor.refname">state_Endpoint_5</stringProp>
               <stringProp name="RegexExtractor.regex">state=(.+?)&amp;</stringProp>
@@ -2234,7 +2234,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="01-">
             <stringProp name="HTTPSampler.domain">mibalogin-qa.gcba.gob.ar</stringProp>
@@ -2349,7 +2349,7 @@
             </RegexExtractor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="02-" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="02-">
             <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
             <stringProp name="HTTPSampler.domain">mibalogin-qa.gcba.gob.ar</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
@@ -2459,7 +2459,7 @@
             </RegexExtractor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="03-" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="03-">
             <stringProp name="TestPlan.comments">Detected a redirect from the previous sample</stringProp>
             <stringProp name="HTTPSampler.domain">mibalogin-qa.gcba.gob.ar</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
@@ -2601,7 +2601,7 @@
             </RegexExtractor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="04-">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="04-" enabled="true">
             <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
             <stringProp name="HTTPSampler.domain">mibalogin-qa.gcba.gob.ar</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
@@ -2691,7 +2691,7 @@
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="session_state_Endpoint_5">
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="session_state_Endpoint_5" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">true</stringProp>
               <stringProp name="RegexExtractor.refname">session_state_Endpoint_5</stringProp>
               <stringProp name="RegexExtractor.regex">session_state=(.+?)&amp;</stringProp>
@@ -2701,7 +2701,7 @@
               <stringProp name="RegexExtractor.match_number">1</stringProp>
             </RegexExtractor>
             <hashTree/>
-            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="code_Endpoint_5">
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="code_Endpoint_5" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">true</stringProp>
               <stringProp name="RegexExtractor.refname">code_Endpoint_5</stringProp>
               <stringProp name="RegexExtractor.regex">code=(.+)</stringProp>
@@ -2722,7 +2722,7 @@
             </RegexExtractor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="05-">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="05-" enabled="true">
             <stringProp name="TestPlan.comments">Detected a redirect from the previous sample</stringProp>
             <stringProp name="HTTPSampler.domain">ba-taxi-qa.gcba.gob.ar</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
@@ -2788,7 +2788,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
